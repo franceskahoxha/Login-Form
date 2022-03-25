@@ -1,17 +1,14 @@
 @import './img';
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+@import './variables';
+@import './resets';
+@import './mobile';
 .left-form{
     padding-left: 7rem;
     padding-right: 7rem;
 
 }
 .text-weight{
-    font-weight: 700;
+    font-weight: $font-weight;
 }
 
 .bg-img{
@@ -37,10 +34,9 @@
 }
 
 
-@media only screen and (max-width: 538px){
+@media only screen and (max-width: $mobile-breakpoint){
     .left-form  {
-      padding-left: 2rem;  
-      padding-right: 1rem;
+      padding: 0 $padding;
     }
 
     .bg-img{
