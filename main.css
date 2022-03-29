@@ -38,16 +38,23 @@
 /*Form validation */
 .login_form #email_error,
 .login_form #pass_error{
-	margin-top: 5px;
-	width: 345px;
-	font-size: 18px;
+	width: 450px;
+	font-size: 12px;
 	color: #C62828;
-	background: rgba(255,0,0,0.1);
-	text-align: center;
+	background: white;
+	text-align:end;
 	padding: 5px 8px;
-	border-radius: 3px;
-	border: 1px solid #EF9A9A;
 	display: none;
+}
+
+.login_form #check_error{
+  width: 200px;
+	font-size: 12px;
+	color: #C62828;
+	background: white;
+	text-align:end;
+	display: none;
+
 }
 
 @media only screen and (max-width: 538px) {
