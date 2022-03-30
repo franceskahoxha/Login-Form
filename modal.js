@@ -1,6 +1,7 @@
-
- document.getElementById("exampleModal").addEventListener("reset", RemoveModal);
-
- function RemoveModal() {
-   document.getElementsById("resetmodal").value = false;
- }
+function UnSelectAll(){
+  var items=document.getElementsByName('checkbox');
+  for(var i=0; i<items.length; i++){
+    if(items[i].type=='checkbox')
+      items[i].checked=false;
+  }
+}

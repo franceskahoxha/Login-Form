@@ -36,10 +36,11 @@
                         placeholder="ex: name@email.com"
                         name="email"
                         autocomplete="off"
-                        required
+                        oninput="validateForm()"
+                        
                     
                 />
-                <div id="email_error" class="login_form">Required*</div>
+                <div id="email_error" class="login_form">Required*: name@email.com</div>
 
                 <label for="exampleInputPassword1" class="form-label" id="passw">Password</label>
                 <input
@@ -49,7 +50,7 @@
                         placeholder="ex: w45hd63l7s"
                         name="password"
                         autocomplete="off"
-                        required
+                        onchange="email_validate(this.value);" 
                         pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{1,}$"
                 />
                 <div id="pass_error" class="login_form">Required: minimum 10 characters, at least one letter and one number*</div>
@@ -92,7 +93,7 @@
 
                         </div>
                         <div class="modal-footer">
-                        <button  class="btn btn-secondary" data-bs-dismiss="modal" name="cancel" onclick="RemoveModal()" id="resetmodal" type="reset">Cancel</button>
+                        <button  class="btn btn-secondary" data-bs-dismiss="modal" name="cancel"  id="resetmodal" onclick='UnSelectAll()' value="Unselect All">Cancel</button>
                         <button type="button" class="btn btn-primary checkall" data-bs-dismiss="modal" name="button" name="agree" onClick="checkAll()" >I Agree</button>
                         </div>
                         
@@ -108,7 +109,7 @@
                 <a href="#" class="link-primary" id="forgot">Forgot password?</a> 
                 </div>
                 <div class="d-grid gap-2">
-                <button class="btn btn-primary my-3" type="submit" id="login" disabled>Log in</button>  
+                <button class="btn btn-primary my-3" type="submit" id="login" disabled >Log in</button>  
                 </div>
                 </form>
                     <p class="text-muted">Don't have an account? <a href="#" class="link-primary">Sign up</a></p>

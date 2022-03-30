@@ -16,7 +16,7 @@ checkbox.addEventListener('textInput', check_Verify);
 
 
 function validated(){
-	if (email.value.length < 9) {
+	if (email.value.length < 14) {
 		email.style.border = "1px solid";
 		email_error.style.display = "block";
 		email.focus();
@@ -36,7 +36,7 @@ function validated(){
 
 }
 function email_Verify(){
-	if (email.value.length >= 8) {
+	if (email.value.length >= 13) {
 		email.style.border = "1px solid silver";
 		email_error.style.display = "none";
 		return true;
